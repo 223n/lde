@@ -14,6 +14,20 @@
       debug: { var: ansible_connection }
     - name: '[DEBUG] Ansible Python Interpreter'
       debug: { var: ansible_python_interpreter }
+    - name: '[Git-Config] Add E-Mail'
+      git_config:
+        name: user.email
+        scope: global
+        value: '223n@223n.tech'
+    - name: '[Git-Config] User Name'
+      git_config:
+        name: user.name
+        scope: global
+        value: "223n"
+    - name: '[Git-Config] Color UI'
+      git_config:
+        name: color.ui
+        value: auto
     - name: '[Chrome] Google apt file exist?'
       command: test -f {{ apt_file }}
       register: google_apt_exists
