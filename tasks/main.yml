@@ -42,3 +42,11 @@
       ansible.builtin.apt:
         pkg: google-chrome-stable
         state: present
+    - name: '[Vagrant] Install Vagrant.'
+      ansible.builtin.apt:
+        pkg: vagrant-libvirt
+        state: latest
+    - name: '[Vagrant] Install Daemon.'
+      ansible.builtin.apt:
+        pkg: libvirt-daemon-system
+        state: latest
