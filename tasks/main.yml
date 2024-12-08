@@ -3,6 +3,7 @@
   become: true
   vars:
     - apt_file: /etc/apt/sources.list.d/google-chrome.list
+    - user_name: ja223n
   tasks:
     - name: '[DEBUG] Get HostName'
       shell: hostname
@@ -50,3 +51,9 @@
       ansible.builtin.apt:
         pkg: libvirt-daemon-system
         state: latest
+    - name: '[Vagrant] Add User Group.'
+      ansible.builtin.user:
+        name: "{{ user_name }}"
+        group: "{{ user_name }}"
+        groups: "libvirt"
+        append: true
