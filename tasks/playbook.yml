@@ -13,3 +13,17 @@
       tags: role_git
     - role: vagrant
       tags: role_vagrant
+  tasks:
+    - name: ssh folder exists
+      stat:
+        path: "~ja223n/.ssh"
+      register: ssh_result
+      become: false
+    - name: create ssh folder
+      file:
+        path: "~ja223n/.ssh"
+        state: directory
+        owner: "ja223n"
+        group: "ja223n"
+        mode: "700"
+      when: not ssh_result.stat.exists
