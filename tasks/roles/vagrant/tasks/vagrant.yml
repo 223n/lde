@@ -16,3 +16,6 @@
     groups: "libvirt"
     append: true
   become: true
+- name: '[Vagrant] Message.'
+  debug:
+    msg: "Vagrantを使用するためのグループを追加しました。反映するためには、一度、ログアウトしてください。"
