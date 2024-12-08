@@ -1,0 +1,15 @@
+---
+# code: language=ansible
+- hosts: localhost
+  become: true
+  pre_tasks:
+    - name: "[APT] Update Package Cache"
+      ansible.builtin.apt:
+        update_cache: true
+  roles:
+    - role: chrome
+      tags: role_chrome
+    - role: git
+      tags: role_git
+    - role: vagrant
+      tags: role_vagrant

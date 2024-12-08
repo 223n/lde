@@ -1,0 +1,4 @@
+---
+- name: "Chromeのインストール"
+  ansible.builtin.import_tasks:
+    file: chrome.yml

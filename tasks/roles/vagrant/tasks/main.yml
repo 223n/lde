@@ -1,0 +1,4 @@
+---
+- name: "vagrantのインストール"
+  ansible.builtin.import_tasks:
+    file: vagrant.yml

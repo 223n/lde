@@ -1,0 +1,7 @@
+---
+- name: "gitのインストール"
+  ansible.builtin.import_tasks:
+    file: git.yml
+- name: "git configの設定"
+  ansible.builtin.import_tasks:
+    file: git-config.yml
