@@ -1,4 +1,4 @@
-# lde (Local Development Environment)
+# lde (Local Debian Environment)
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg?logo=Apache)](/LICENSE)
 [![Debian](https://img.shields.io/badge/OS-Debian_12-red.svg?logo=Debian)](https://www.debian.or.jp/)
