@@ -6,6 +6,22 @@
     - name: "[APT] Update Package Cache"
       ansible.builtin.apt:
         update_cache: true
+        cache_valid_time: 3600
+    - name: "[APT] Install GDebi"
+      ansible.builtin.apt:
+        name: gdebi
+    - name: "[APT] Install python3-venv"
+      ansible.builtin.apt:
+        name: python3-venv
+    - name: "[APT] Install python3-pip"
+      ansible.builtin.apt:
+        name: python3-pip
+    - name: "[APT] Install pipx"
+      ansible.builtin.apt:
+        name: pipx
+    - name: "[pip] Install Ansible-CMDB"
+      community.general.pipx:
+        name: ansible-cmdb
   roles:
     - role: chrome
       tags: role_chrome
