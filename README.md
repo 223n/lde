@@ -20,7 +20,7 @@
 
 ## インストールしているものなど
 
-[![Chrome](https://img.shields.io/badge/WebBrowser-Chrome-white.svg?logo=Chrome)](https://www.google.com/intl/ja_jp/chrome/)
-[![Git](https://img.shields.io/badge/Tool-Git-red.svg?logo=Git)](https://git-scm.com/)
-[![Vagrant](https://img.shields.io/badge/Tool-Vagrant-blue.svg?logo=Vagrant)](https://www.vagrantup.com/)
-[![SSH](https://img.shields.io/badge/Tool-SSH-blue.svg?logo=SSH)](https://wiki.debian.org/SSH)
+[![Chrome](https://img.shields.io/badge/-Chrome-blue.svg?logo=Chrome)](https://www.google.com/intl/ja_jp/chrome/)
+[![Git](https://img.shields.io/badge/-Git-blue.svg?logo=Git)](https://git-scm.com/)
+[![Vagrant](https://img.shields.io/badge/-Vagrant-blue.svg?logo=Vagrant)](https://www.vagrantup.com/)
+[![SSH](https://img.shields.io/badge/-SSH-blue.svg?logo=SSH)](https://wiki.debian.org/SSH)
