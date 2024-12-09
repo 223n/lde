@@ -14,6 +14,9 @@
 ## 必要なもの
 
 * [Ansible](https://www.ansible.com/)
+  * [community.general collection](https://docs.ansible.com/ansible/latest/collections/community/general/slack_module.html)
+    * ```ansible-galaxy collection install community.general```でインストールする必要があります。
+    * Slack通知に使用しています。
 
 ## インストールしているものなど
 
