@@ -17,6 +17,10 @@
   * [community.general collection](https://docs.ansible.com/ansible/latest/collections/community/general/slack_module.html)
     * ```ansible-galaxy collection install community.general```でインストールする必要があります。
     * Slack通知に使用しています。
+* pipxについて
+  * install後に、ひとてまする必要があります。
+  * ```pipx ensurepath``` を実行する
+  * ```source ~/.bashrc``` を実行する
 
 ## インストールしているものなど
 
