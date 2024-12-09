@@ -1,0 +1,4 @@
+---
+- name: "DELLの設定"
+  ansible.builtin.import_tasks:
+    file: dell.yml

@@ -13,6 +13,8 @@
       tags: role_git
     - role: vagrant
       tags: role_vagrant
+    - role: dell
+      tags: role_dell
   tasks:
     - name: ssh folder exists
       stat:
