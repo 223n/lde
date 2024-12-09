@@ -28,3 +28,11 @@
 [![Git](https://img.shields.io/badge/-Git-blue.svg?logo=Git)](https://git-scm.com/)
 [![Vagrant](https://img.shields.io/badge/-Vagrant-blue.svg?logo=Vagrant)](https://www.vagrantup.com/)
 [![SSH](https://img.shields.io/badge/-SSH-blue.svg?logo=SSH)](https://wiki.debian.org/SSH)
+
+## ホームディレクトリを日本語から英語に変更する
+
+* 次のコマンドを実行して、ホームディレクトリのフォルダ名を日本語から英語に変更することができます。
+
+```shell
+LANG=C xdg-user-dirs-gtk-update
+```
