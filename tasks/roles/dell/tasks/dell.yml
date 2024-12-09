@@ -1,6 +1,6 @@
 ---
 - name: '[DELL] Disable systemd-backlight@.service.'
   ansible.builtin.systemd_service:
-    name: systemd-backlight@leds
+    name: systemd-backlight@leds:dell::kbd_backlight.service
     masked: true
   become: true
