@@ -2,6 +2,7 @@
 # code: language=ansible
 - hosts: localhost
   become: true
+  gather_facts: yes
   pre_tasks:
     - name: "[APT] Update Package Cache"
       ansible.builtin.apt:
@@ -19,9 +20,12 @@
     - name: "[APT] Install pipx"
       ansible.builtin.apt:
         name: pipx
-    - name: "[pip] Install Ansible-CMDB"
-      community.general.pipx:
-        name: ansible-cmdb
+    - name: "[APT] Install python-is-python3"
+      ansible.builtin.apt:
+        name: python-is-python3
+    - name: '[APT] Install tree'
+      ansible.builtin.apt:
+        name: tree
   roles:
     - role: chrome
       tags: role_chrome
