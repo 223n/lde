@@ -1,33 +1,25 @@
 ---
-- name: '[Chrome] Google apt file exist?'
-  stat:
-    path: '{{ apt_file }}'
-  register: google_apt_exists
-  become: true
-- name: '[Chrome] Add Google Chrome key'
-  shell: wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
-  when: not google_apt_exists.stat.exists
-  become: true
-- name: '[Chrome] Add Google Chrome repo'
-  ansible.builtin.copy:
-    src: google-chrome.list
-    dest: /etc/apt/sources.list.d/
-    owner: root
-    group: root
-    mode: 644
-  when: not google_apt_exists.stat.exists
-  become: true
-- name: '[Chrome] Update all packages to their latest version.'
+- name: '[Chrome] Install ca-certificates'
   ansible.builtin.apt:
-    name: "*"
-    state: latest
+    pkg: ca-certificates
   become: true
-- name: '[Chrome] Update apt cache.'
+- name: '[Chrome] Install apt-transport-https'
   ansible.builtin.apt:
-    update_cache: yes
+    pkg: apt-transport-https
   become: true
-- name: '[Chrome] Install Google Chrome.'
+- name: '[Chrome] Get key'
+  ansible.builtin.get_url:
+    url: 'https://dl-ssl.google.com/linux/linux_signing_key.pub'
+    dest: '/usr/share/keyrings/google.pub'
+    mode: 'u=rw,go=r'
+    force: true
+  become: true
+- name: '[Chrome] Add VSCode repo'
+  ansible.builtin.apt_repository:
+    repo: 'deb [arch=amd64 trusted=true signed-by=/usr/share/keyrings/google.pub] https://dl.google.com/linux/chrome/deb/ stable main'
+    filename: 'chrome'
+  become: true
+- name: '[Chrome] Install VSCode'
   ansible.builtin.apt:
-    pkg: google-chrome-stable
-    state: present
+    pkg: 'google-chrome-stable'
   become: true
