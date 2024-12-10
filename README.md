@@ -28,6 +28,7 @@
 [![Git](https://img.shields.io/badge/-Git-blue.svg?logo=Git)](https://git-scm.com/)
 [![Vagrant](https://img.shields.io/badge/-Vagrant-blue.svg?logo=Vagrant)](https://www.vagrantup.com/)
 [![SSH](https://img.shields.io/badge/-SSH-blue.svg?logo=SSH)](https://wiki.debian.org/SSH)
+[![VSCode](https://img.shields.io/badge/-VSCode-blue.svg?logo=VSCode)](https://code.visualstudio.com/)
 
 ## ホームディレクトリを日本語から英語に変更する
 
