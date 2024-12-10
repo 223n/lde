@@ -14,12 +14,12 @@
     mode: 'u=rw,go=r'
     force: true
   become: true
-- name: '[Chrome] Add VSCode repo'
+- name: '[Chrome] Add Chrome repo'
   ansible.builtin.apt_repository:
     repo: 'deb [arch=amd64 trusted=true signed-by=/usr/share/keyrings/google.pub] https://dl.google.com/linux/chrome/deb/ stable main'
     filename: 'chrome'
   become: true
-- name: '[Chrome] Install VSCode'
+- name: '[Chrome] Install Chrome'
   ansible.builtin.apt:
     pkg: 'google-chrome-stable'
   become: true
