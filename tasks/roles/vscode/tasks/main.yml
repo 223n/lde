@@ -1,0 +1,4 @@
+---
+- name: "vscodeのインストール"
+  ansible.builtin.import_tasks:
+    file: vscode.yml

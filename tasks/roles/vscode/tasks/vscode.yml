@@ -1,0 +1,25 @@
+---
+- name: '[VSCode] Install ca-certificates'
+  ansible.builtin.apt:
+    pkg: ca-certificates
+  become: true
+- name: '[VSCode] Install apt-transport-https'
+  ansible.builtin.apt:
+    pkg: apt-transport-https
+  become: true
+- name: '[VSCode] Get key'
+  ansible.builtin.get_url:
+    url: '{{ vscode_pkg_url }}/keys/microsoft.asc'
+    dest: '/usr/share/keyrings/'
+    mode: 'u=rw,go=r'
+    force: true
+  become: true
+- name: '[VSCode] Add VSCode repo'
+  ansible.builtin.apt_repository:
+    repo: 'deb [arch=amd64 trusted=true signed-by=/usr/share/keyrings/microsoft.asc] {{ vscode_pkg_url }}/repos/vscode stable main'
+    filename: 'vscode'
+  become: true
+- name: '[VSCode] Install VSCode'
+  ansible.builtin.apt:
+    pkg: 'code'
+  become: true

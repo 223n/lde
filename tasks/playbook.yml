@@ -41,6 +41,8 @@
       tags: role_vagrant
     - role: dell
       tags: role_dell
+    - role: vscode
+      tags: role_vscode
   tasks:
     - name: ssh folder exists
       stat:
