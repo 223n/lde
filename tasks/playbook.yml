@@ -29,6 +29,9 @@
     - name: '[APT] Install xdg-user-dirs-gtk'
       ansible.builtin.apt:
         name: xdg-user-dirs-gtk
+    - name: '[APT] Install BlueMan'
+      ansible.builtin.apt:
+        name: blueman
   roles:
     - role: chrome
       tags: role_chrome
