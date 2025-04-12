@@ -20,11 +20,18 @@
 ansible-playbook --connection=local -i localhost, --limit localhost tasks/playbook.yml --ask-become-pass
 ```
 
+または、次のコマンドでも実行できます。
+
+```bash
+make ansible.play
+```
+
 ## 必要なもの
 
 * [Ansible](https://www.ansible.com/)
   * [community.general collection](https://docs.ansible.com/ansible/latest/collections/community/general/slack_module.html)
     * ```ansible-galaxy collection install community.general```でインストールする必要があります。
+      * ```make ansible.presetup```でも同じ内容が実行されます。
     * Slack通知に使用しています。
 * pipxについて
   * install後に、ひとてまする必要があります。
