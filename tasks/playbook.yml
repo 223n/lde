@@ -1,8 +1,8 @@
 ---
 # code: language=ansible
-- hosts: localhost
+- hosts: all
   become: true
-  gather_facts: yes
+  gather_facts: true
   pre_tasks:
     - name: "[APT] Update Package Cache"
       ansible.builtin.apt:

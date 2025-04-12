@@ -4,12 +4,21 @@
 [![Debian](https://img.shields.io/badge/OS-Debian_12-red.svg?logo=Debian)](https://www.debian.or.jp/)
 [![Ansible](https://img.shields.io/badge/-Ansible-red.svg?logo=Ansible)](https://www.ansible.com/)
 
-使用している個人端末(Debian)の初期設定を行うためのAnsible Playbookです。
+使用している個人端末（Debian）の初期設定を行うためのAnsible Playbookです。
 
-## 動作確認出来ている環境
+## 動作確認できている環境
 
 * OS: [Debian 12](https://www.debian.or.jp/)
 * PC: DELL Inspiron 14
+
+## 実行方法
+
+次のコマンドを実行すると、localhostで実行されます。
+実行時にsudo権限を実行する際のパスワードを聞かれます。
+
+```bash
+ansible-playbook --connection=local -i localhost, --limit localhost tasks/playbook.yml --ask-become-pass
+```
 
 ## 必要なもの
 
@@ -32,7 +41,7 @@
 
 ## ホームディレクトリを日本語から英語に変更する
 
-* 次のコマンドを実行して、ホームディレクトリのフォルダ名を日本語から英語に変更することができます。
+* 次のコマンドを実行することで、ホームディレクトリのフォルダー名を「日本語」から「英語」に変更します。
 
 ```shell
 LANG=C xdg-user-dirs-gtk-update

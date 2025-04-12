@@ -2,3 +2,5 @@
 user_name: '223n'
 mail_address: '223n@223n.tech'
 color_ui: 'auto'
+git_prompt_enabled: true
+theme_url: 'https://raw.githubusercontent.com/wate/Dotfiles/master/.git-prompt-colors.sh'
