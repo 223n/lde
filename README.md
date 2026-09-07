@@ -6,6 +6,27 @@
 
 使用している個人端末（Debian）の初期設定を行うためのAnsible Playbookです。
 
+## メンテナンスを終了しました
+
+このリポジトリは更新を終了し、アーカイブします。最後の更新は2025年4月です。
+
+対象としていた **Debian 12（bookworm）は、2026年7月11日に通常のセキュリティ
+サポートを終了**しました（LTSは2028年6月30日まで）。現行のDebianは13
+（trixie、2025年8月9日リリース）です。Playbookは Debian 12 を前提に
+書かれており、13での動作は確認していません。
+
+未解決のまま残っているIssueが4件あります。
+
+| Issue | 内容 |
+|-------|------|
+| [#5](https://github.com/223n/lde/issues/5) | connmanでは非接続なのにWi-Fiに接続できてしまっている |
+| [#4](https://github.com/223n/lde/issues/4) | ansible-cmdbを実行するとエラーが発生する |
+| [#3](https://github.com/223n/lde/issues/3) | ansible-cmdbの最新debをansibleでインストールしたい |
+| [#2](https://github.com/223n/lde/issues/2) | apt-getを実行した際に、警告が表示される |
+
+アーカイブ後はIssueの操作もできなくなるため、内容をここに残します。
+Playbookを流用する場合は、これらが未解決である前提でお読みください。
+
 ## 動作確認できている環境
 
 * OS: [Debian 12](https://www.debian.or.jp/)
